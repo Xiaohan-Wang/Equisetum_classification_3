@@ -7,6 +7,7 @@ cfg = {
     'name': 'Equisetum',
 
     # file directory
+    'main_dir': code_dir,
     'img_dir': code_dir + '/Equisetum/Images',
     'anno_dir': code_dir + '/Equisetum/Annotations',
     'training_set': code_dir + '/Equisetum/training_set.json',
