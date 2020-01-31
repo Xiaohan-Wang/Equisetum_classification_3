@@ -9,4 +9,4 @@ We use a pytorch implementation for SSD as our base model, and the original repo
 ### Dataset
 Please download our Equisetum dataset [here](). Put it under the main folder.
 
-In our Equisetum dataset, there are three json files for training, validation and test set, respectively. You can also split the dataset by yourself with **data_processing/split_dataset.py**
+In our Equisetum dataset, there are three json files for training, validation and test set, respectively. You can also split the dataset by yourself with **util/split_datasets.py**

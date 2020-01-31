@@ -1,4 +1,4 @@
-""" A python script to split Equisetum_dataset into training, validation, and test set. """
+""" A python script to split Equisetum into training, validation, and test set. """
 
 import json
 import os
@@ -61,11 +61,11 @@ def split_dataset(training_percent, test_percent):
 
 def get_json_dataset(training_percent, test_percent):
     train_data, test_data, val_data = split_dataset(training_percent, test_percent)
-    with open('../Equisetum_dataset/training_set.json', 'w') as tr_set:
+    with open('../Equisetum/training_set.json', 'w') as tr_set:
         json.dump(train_data, tr_set)
-    with open('../Equisetum_dataset/val_set.json', 'w') as v_set:
+    with open('../Equisetum/val_set.json', 'w') as v_set:
         json.dump(val_data, v_set)
-    with open('../Equisetum_dataset/test_set.json', 'w') as te_set:
+    with open('../Equisetum/test_set.json', 'w') as te_set:
         json.dump(test_data, te_set)
 
 

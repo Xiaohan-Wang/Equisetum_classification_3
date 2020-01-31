@@ -6,8 +6,8 @@ cfg = {
     'name': 'Equisetum',
 
     # file directory
-    'img_dir': code_dir + '/Equisetum_dataset/Images',
-    'anno_dir': code_dir + '/Equisetum_dataset/Annotations',
+    'img_dir': code_dir + '/Equisetum/Images',
+    'anno_dir': code_dir + '/Equisetum/Annotations',
     # 'training_set': '/Users/xiaohan/research/Equisetum/code/data_processing/HL_training_set.json',
     # 'val_set': '/Users/xiaohan/research/Equisetum/code/data_processing/HL_val_set.json',
     # 'test_set': '/Users/xiaohan/research/Equisetum/code/data_processing/HL_test_set.json',
