@@ -5,22 +5,22 @@ import numpy as np
 from utils.augmentations import SSDAugmentation
 import json
 import os
-from utils.config import cfg
+from config import cfg
 
 
-class LeavesDataset(data.Dataset):
+class EquisetumDataset(data.Dataset):
     """Equisetum dataset"""
 
     def __init__(self, filepath, transform=None):
-        """
-        :param filepath: dataset filepath
-        :param transform: transformation to perform on the image and annotation
-        """
         self.transform = transform
         self.data = []
         with open(filepath, 'r') as f:
             data = json.load(f)
+        # load annotations for each image except for ferrissii
         for i in range(len(data)):
+            # We assign all nodes in hyemale as H node, and all nodes in laevigatum as L node. However, since ferrissii
+            # contains nodes of both types, we cannot use it as our training data for node detection task since we are
+            # not sure the node type (H node or L node) for nodes in ferrissii.
             if data[i]['species'] != 'ferrissii':
                 self.data.append(data[i])
 
@@ -48,20 +48,20 @@ class LeavesDataset(data.Dataset):
 
         return img, target, height, width
 
-    def draw_boxes(self, index):
-        img, target, h, w = self.pull_item(index)
-        img = img.copy()
-        for box in target:
-            xs, ys, xe, ye = box[:4]
-            label = box[4]
-            img_box = cv2.rectangle(img, (int(xs * w), int(ys * h)), (int(xe * w), int(ye * h)), (0, 0, 255), 3)
-        return img_box
-
-
-if __name__ == '__main__':
-    training_set = '/Users/xiaohan/research/Equisetum/code/data/training_set.json'
-    ds = LeavesDataset(training_set, SSDAugmentation())
-    for i in range(10):
-        img = ds.draw_boxes(i)
-        name = 'example' + str(i) + '.jpg'
-        cv2.imwrite(name, img)
+#     def draw_boxes(self, index):
+#         img, target, h, w = self.pull_item(index)
+#         img = img.copy()
+#         for box in target:
+#             xs, ys, xe, ye = box[:4]
+#             label = box[4]
+#             img_box = cv2.rectangle(img, (int(xs * w), int(ys * h)), (int(xe * w), int(ye * h)), (0, 0, 255), 3)
+#         return img_box
+#
+#
+# if __name__ == '__main__':
+#     training_set = '/Users/xiaohan/research/Equisetum_new/Equisetum/training_set.json'
+#     ds = EquisetumDataset(training_set, SSDAugmentation())
+#     for i in range(10):
+#         img = ds.draw_boxes(i)
+#         name = 'example' + str(i) + '.jpg'
+#         cv2.imwrite(name, img)
