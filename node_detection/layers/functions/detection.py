@@ -1,7 +1,7 @@
 import torch
 from torch.autograd import Function
 from ..box_utils import decode, nms
-from config import *
+from node_detection.config import *
 
 
 class Detect(Function):

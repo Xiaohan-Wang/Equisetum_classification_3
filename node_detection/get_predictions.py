@@ -1,13 +1,13 @@
 import os
 import torch
-from utils.ssd import build_ssd
+from node_detection.utils.ssd import build_ssd
 import cv2
 import numpy as np
-from utils.transform import BaseTransform
+from node_detection.utils.transform import BaseTransform
 import json
 from tqdm import tqdm
 import warnings
-from config import cfg
+from node_detection.config import cfg
 
 
 warnings.filterwarnings('ignore')
@@ -149,8 +149,8 @@ def get_predictions(cuda, net_filepath, tile, overlap, batch_size, iouthresh):
     else:
         torch.set_default_tensor_type('torch.FloatTensor')
 
-    # get prediction for training, validation and test set images
-    for file in ['training_set', 'val_set', 'test_set']:
+    # for file in ['training_set', 'val_set', 'test_set']:
+    for file in ['test_set']:
         test_img_file = cfg[file]
         data = test_img(cuda, net_filepath, test_img_file, tile, overlap, batch_size, iouthresh)
         with open(os.path.join(cfg['main_dir'], 'results', 'predictions', file + '.json'), 'w') as f:
@@ -162,14 +162,15 @@ def get_predictions(cuda, net_filepath, tile, overlap, batch_size, iouthresh):
 if __name__ == '__main__':
     # use the pretrained net or your own model
     net_filepath = cfg['save_folder'] + cfg['name'] + '/model.pth'
-    print(net_filepath)
 
     tile = 500  # split the image into tiles so that the test image size is similar to training image size
     overlap = 100  # overlap between two tiles
     batch_size = 8  # how many tiles are processed by one inference
-    iouthresh = 0.1 # supress overlapped prediction window
+    iouthresh = 0.1 # supress overlapped predictions window
 
     cuda = True
 
-    # get prediction for training, validation and test set images
+    # get predictions for test set images
     get_predictions(cuda, net_filepath, tile, overlap, batch_size, iouthresh)
+    
+

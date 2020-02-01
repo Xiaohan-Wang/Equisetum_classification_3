@@ -1,7 +1,7 @@
-from utils.transform import *
-from utils.augmentations import SSDAugmentation
-from layers.modules import MultiBoxLoss
-from utils.ssd import build_ssd
+from node_detection.utils.transform import *
+from node_detection.utils.augmentations import SSDAugmentation
+from node_detection.layers.modules import MultiBoxLoss
+from node_detection.utils.ssd import build_ssd
 import os
 import time
 import torch
@@ -12,8 +12,8 @@ import torch.backends.cudnn as cudnn
 import torch.nn.init as init
 import torch.utils.data as data
 import argparse
-from Equisetum_dataset import EquisetumDataset
-from config import cfg
+from node_detection.Equisetum_dataset import EquisetumDataset
+from node_detection.config import cfg
 
 
 def str2bool(v):

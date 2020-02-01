@@ -1,6 +1,6 @@
 # TODO: automatic detect directory
-# code_dir = "/Users/xiaohan/research/Equisetum_new"
-code_dir = "/home/home1/xw176/work/Equisetum_new"
+code_dir = "/Users/xiaohan/research/Equisetum_new"
+# code_dir = "/home/home1/xw176/work/Equisetum_new"
 
 cfg = {
     # dataset name

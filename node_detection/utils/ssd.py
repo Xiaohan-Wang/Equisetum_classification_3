@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from config import cfg
+from node_detection.config import cfg
 from torch.autograd import Variable
-from layers import *
+from node_detection.layers import *
 import os
 
 

@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import types
 from numpy import random
-from utils.bbox import get_corners, rotate_im, rotate_box, get_enclosing_box
+from node_detection.utils.bbox import get_corners, rotate_im, rotate_box, get_enclosing_box
 
 
 # BOX_FORMAT = [x, y, x+w, y+h]

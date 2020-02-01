@@ -2,10 +2,9 @@ import torch
 import torch.utils.data as data
 import cv2
 import numpy as np
-from utils.augmentations import SSDAugmentation
 import json
 import os
-from config import cfg
+from node_detection.config import cfg
 
 
 class EquisetumDataset(data.Dataset):
