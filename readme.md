@@ -20,7 +20,7 @@ We use a pytorch implementation for SSD as our base model, and the original repo
 
 4. With `node_detection/visualization.py`, you can visualize the prediction result by putting the predicted bounding box on original image. The results are saved in **results/visualization**.
 
-### classification
+### Equisetum Classification
 1. `classification/get_features.py` is provided to extract useful features for classification task from the raw bounding box information. The output features can be found at **results/features**.
 
 2. With the extracted features, `classification/classifier.py` trains a linear regression classifier to finish the Equisetum classification task. It should report the classification accuracy and generate a confusion table stored in **results/classification**.
