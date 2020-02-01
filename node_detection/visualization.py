@@ -94,4 +94,4 @@ if __name__ == '__main__':
 
     gt_path = cfg[set_name]
     pre_path = cfg['main_dir'] + '/results/predictions/' + set_name + '.json'
-    draw_box(gt_path, pre_path, [0.6, 0.7], save_folder)
+    draw_box(gt_path, pre_path, [0.7, 0.7], save_folder)

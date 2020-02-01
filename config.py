@@ -21,11 +21,11 @@ cfg = {
         'ferrissii': 2
     },
 
-    'node_class': {
-        0: 'bg', #background
-        1: 'HNode',
-        2: 'LNode'
-    },
+    # 'node_class': {
+    #     0: 'bg', #background
+    #     1: 'HNode',
+    #     2: 'LNode'
+    # },
 
     'is_useful_anno': {
         'SteNodeNor': 1,
@@ -34,8 +34,6 @@ cfg = {
         'SteNodeInj': 1,
         'Undefined': 0
     },
-
-    # # 'train_num': 90,
 
     'mean': [218, 213, 194],
     'num_classes': 3,
@@ -52,5 +50,4 @@ cfg = {
     'aspect_ratios': [[2], [2, 3], [2, 3], [2, 3], [2], [2]],
     'variance': [0.1, 0.2],
     'clip': True,
-    # 'eval_folder': 'eval/'
 }
