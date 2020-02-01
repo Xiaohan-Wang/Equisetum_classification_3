@@ -13,7 +13,7 @@ We use a pytorch implementation for SSD as our base model, and the original repo
 
 2. Change the code directory in **config**.
 
-3. A pretrained node detection model is in **node_detection/weights/Equisetum**. To train the model from scratch, run **node_detection/train.py**.
+3. A pretrained node detection model can be found [here](). Put the detection model under **node_detection/weights/Equisetum** folder. To train the model from scratch, run **node_detection/train.py**.
 
 4. You can use the model to predict nodes for test images by **node_detection/get_predictions.py**. This file should generate a json file stored in **node_detection/results/predictions** containing all the detected bounding box for each image in the test set. 
 
