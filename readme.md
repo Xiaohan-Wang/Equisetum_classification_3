@@ -13,12 +13,11 @@ paper：[SSD: Single Shot MultiBox Detector](https://arxiv.org/pdf/1512.02325.pd
 The official and original Caffe code can be found [here](https://github.com/weiliu89/caffe/tree/ssd).  
 We use a pytorch implementation for SSD as our base model, and the original repo is [here](https://github.com/amdegroot/ssd.pytorch).
 
-2. Change the code directory in **config**.
+2. A pretrained node detection model can be found [here](). Put the detection model under **node_detection/weights/Equisetum** folder. To train the model from scratch, run `python -m Equisetum_classification_3.node_detection.train`.
 
-3. A pretrained node detection model can be found [here](). Put the detection model under **node_detection/weights/Equisetum** folder. To train the model from scratch, run `python -m Equisetum_classification_3.node_detection.train`.
+3. You can use the model to predict nodes for test images by `python -m Equisetum_classification_3.node_detection.get_predictions`. This file should generate three json files stored in **node_detection/results/predictions** containing all the detected bounding box for each image in each set. 
 
-4. You can use the model to predict nodes for test images by **python -m Equisetum_classification_3.node_detection.get_predictions**. This file should generate a json file stored in **node_detection/results/predictions** containing all the detected bounding box for each image in the test set. 
+4. With **visualization.py**, you can visualize the prediction result by having the predicted bounding box on original image. The result si outputed to **results/visualization**.
 
-5. With **visualization.py**, you can visualize the prediction result by having the predicted bounding box on original image. The result si outputed to **results/visualization**.
-### 
+### classification
 

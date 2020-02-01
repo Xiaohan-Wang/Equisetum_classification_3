@@ -83,7 +83,7 @@ def draw_box(gt_path, pre_path, thresh, save_folder):
 
 
 if __name__ == '__main__':
-    set_name = 'test_set'  #json file containing predictions
+    set_name = 'test_set'  #choose the set to visualize
 
     vis_path = cfg['main_dir'] + '/results/visualization'
     if not os.path.exists(vis_path):

@@ -149,8 +149,7 @@ def get_predictions(cuda, net_filepath, tile, overlap, batch_size, iouthresh):
     else:
         torch.set_default_tensor_type('torch.FloatTensor')
 
-    # for file in ['training_set', 'val_set', 'test_set']:
-    for file in ['test_set']:
+    for file in ['training_set', 'val_set', 'test_set']:
         test_img_file = cfg[file]
         data = test_img(cuda, net_filepath, test_img_file, tile, overlap, batch_size, iouthresh)
         with open(os.path.join(cfg['main_dir'], 'results', 'predictions', file + '.json'), 'w') as f:
@@ -170,7 +169,7 @@ if __name__ == '__main__':
 
     cuda = True
 
-    # get predictions for test set images
+    # get predictions for training, validation and test set images
     get_predictions(cuda, net_filepath, tile, overlap, batch_size, iouthresh)
     
 

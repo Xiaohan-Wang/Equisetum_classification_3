@@ -21,11 +21,11 @@ cfg = {
         'ferrissii': 2
     },
 
-    # 'HL_map_anno': {
-    #     0: 'bg',
-    #     1: 'HNode',
-    #     2: 'LNode'
-    # },
+    'node_class': {
+        0: 'bg', #background
+        1: 'HNode',
+        2: 'LNode'
+    },
 
     'is_useful_anno': {
         'SteNodeNor': 1,
