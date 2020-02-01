@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import json
 import os
-from node_detection.config import cfg
+from config import cfg
 
 
 class EquisetumDataset(data.Dataset):
@@ -46,21 +46,3 @@ class EquisetumDataset(data.Dataset):
             height, width, channels = img.shape
 
         return img, target, height, width
-
-#     def draw_boxes(self, index):
-#         img, target, h, w = self.pull_item(index)
-#         img = img.copy()
-#         for box in target:
-#             xs, ys, xe, ye = box[:4]
-#             label = box[4]
-#             img_box = cv2.rectangle(img, (int(xs * w), int(ys * h)), (int(xe * w), int(ye * h)), (0, 0, 255), 3)
-#         return img_box
-#
-#
-# if __name__ == '__main__':
-#     training_set = '/Users/xiaohan/research/Equisetum_new/Equisetum/training_set.json'
-#     ds = EquisetumDataset(training_set, SSDAugmentation())
-#     for i in range(10):
-#         img = ds.draw_boxes(i)
-#         name = 'example' + str(i) + '.jpg'
-#         cv2.imwrite(name, img)

@@ -13,7 +13,7 @@ import torch.nn.init as init
 import torch.utils.data as data
 import argparse
 from node_detection.Equisetum_dataset import EquisetumDataset
-from node_detection.config import cfg
+from config import cfg
 
 
 def str2bool(v):

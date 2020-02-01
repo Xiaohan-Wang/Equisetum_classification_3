@@ -7,7 +7,7 @@ from node_detection.utils.transform import BaseTransform
 import json
 from tqdm import tqdm
 import warnings
-from node_detection.config import cfg
+from config import cfg
 
 
 warnings.filterwarnings('ignore')

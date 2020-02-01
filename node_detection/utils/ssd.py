@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from node_detection.config import cfg
+from config import cfg
 from torch.autograd import Variable
 from node_detection.layers import *
 import os
