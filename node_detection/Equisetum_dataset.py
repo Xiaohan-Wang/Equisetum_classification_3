@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import json
 import os
-from config import cfg
+from ..config import cfg
 
 
 class EquisetumDataset(data.Dataset):

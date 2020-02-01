@@ -1,13 +1,13 @@
 import os
 import torch
-from node_detection.utils.ssd import build_ssd
+from .utils.ssd import build_ssd
 import cv2
 import numpy as np
-from node_detection.utils.transform import BaseTransform
+from .utils.transform import BaseTransform
 import json
 from tqdm import tqdm
 import warnings
-from config import cfg
+from ..config import cfg
 
 
 warnings.filterwarnings('ignore')

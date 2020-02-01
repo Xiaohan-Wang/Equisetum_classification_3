@@ -1,5 +1,5 @@
 import json
-from config import cfg
+from ..config import cfg
 import cv2
 import os
 import numpy as np

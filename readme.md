@@ -5,6 +5,8 @@ Please download our Equisetum dataset [here](). Put **Images** and **Annotations
 
 In our Equisetum dataset, the three json files are used as training, validation and test set, respectively. You can also split the dataset by yourself with `python -m Equisetum_classification_3.Equisetum.split_datasets`.
 
+[Note]: Before running any code in the repo, make sure that you change parameter `code_dir` in **config.py** to your own repo directory.
+
 ### Node detection
 1. We use SSD to detect nodes from Equisetum images.  
 paper：[SSD: Single Shot MultiBox Detector](https://arxiv.org/pdf/1512.02325.pdf).  
