@@ -1,9 +1,9 @@
 ## Equisetum classification
 
 ### Dataset
-Please download our Equisetum dataset [here](). Put it under the main folder.
+Please download our Equisetum dataset [here](). Put **Images**, **Annotations**, and the three json files under **Equisetum** folder.
 
-In our Equisetum dataset, there are three json files for training, validation and test set, respectively. You can also split the dataset by yourself with **split_datasets.py** in the folder.
+In our Equisetum dataset, the three json files are used as training, validation and test set, respectively. You can also split the dataset by yourself with **split_datasets.py** in the folder.
 
 ### Node detection
 1. We use SSD to detect nodes from Equisetum images.  
