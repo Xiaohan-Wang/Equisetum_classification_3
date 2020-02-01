@@ -13,7 +13,7 @@ cfg = {
     'training_set': code_dir + '/Equisetum/training_set.json',
     'val_set': code_dir + '/Equisetum/val_set.json',
     'test_set': code_dir + '/Equisetum/test_set.json',
-    'save_folder': code_dir + '/weights/',
+    'save_folder': code_dir + '/node_detection/weights/',
 
     'class': {
         'hyemale': 0,

@@ -83,16 +83,15 @@ def draw_box(gt_path, pre_path, thresh, save_folder):
 
 
 if __name__ == '__main__':
+    set_name = 'test_set'  #json file containing predictions
+
     vis_path = cfg['main_dir'] + '/results/visualization'
     if not os.path.exists(vis_path):
         os.makedirs(vis_path)
+    save_folder = os.path.join(vis_path, set_name)
+    if not os.path.exists(save_folder):
+        os.makedirs(save_folder)
 
-    prediction_path = cfg['main_dir']+'/results/predictions'
-    for pre_file in os.listdir(prediction_path):
-        set_name = pre_file.split('.')[0]  #test_set.json
-        save_folder = os.path.join(vis_path, set_name)
-        if not os.path.exists(save_folder):
-            os.makedirs(save_folder)
-        gt_path = cfg[set_name]
-        pre_path = prediction_path + '/' + pre_file
-        draw_box(gt_path, pre_path, [0.6, 0.7], save_folder)
+    gt_path = cfg[set_name]
+    pre_path = cfg['main_dir'] + '/results/predictions/' + set_name + '.json'
+    draw_box(gt_path, pre_path, [0.6, 0.7], save_folder)
