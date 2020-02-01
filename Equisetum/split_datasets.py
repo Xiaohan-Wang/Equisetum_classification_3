@@ -1,8 +1,7 @@
 """ A python script to split Equisetum into training, validation, and test set. """
-
 import json
 import os
-from config import cfg
+from ..config import cfg
 import random
 import numpy as np
 
